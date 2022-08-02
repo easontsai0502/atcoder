@@ -1,0 +1,37 @@
+[
+	{"name":"main",
+		"verson_tree":[
+			{"time":"08-02-2022-18:17",
+				"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
+				"do":"git create",
+				"name":"atcoder"
+			},
+			{"time":"08-02-2022-18:17",
+				"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
+				"do":"files add",
+				"add":[
+					".\AtCoder Beginner Contest 103\D.cpp"
+					".\AtCoder Beginner Contest 121\D.cpp"
+					".\AtCoder Beginner Contest 121\D_2.cpp"
+					".\AtCoder Beginner Contest 121\Dthink.png"
+					".\AtCoder Beginner Contest 121\Dthink.xcf"
+					".\AtCoder Beginner Contest 141\C.cpp"
+					".\AtCoder Beginner Contest 194\C.cpp"
+					".\AtCoder Beginner Contest 196\D.cpp"
+					".\AtCoder Beginner Contest 197（Sponsored by Panasonic）\C.cpp"
+					".\AtCoder Beginner Contest 199（Sponsored by Panasonic）\C.cpp"
+					".\AtCoder Beginner Contest 217\D.cpp"
+					".\AtCoder Beginner Contest 241（Sponsored by Panasonic）\D.cpp"
+					".\AtCoder Beginner Contest 242\D.cpp"
+					".\AtCoder Beginner Contest 247\C.cpp"
+					".\main_log.json"
+					".\NEC Programming Contest 2021(AtCoder Beginner Contest 229)\C.cpp"
+				],
+				"remove":[],
+				"edit":[],
+				"other_thing":"",
+				"other_branch":[]
+			}
+		]
+	}
+]
