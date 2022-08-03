@@ -14,8 +14,18 @@ int main(){
 	cin>>n;
 	string s;
 	cin>>s;
+	vector<lli> vec;
+	vector<lli>::iterator vec_it=vec.begin();
 	for(int i=1;i<=n;i++){
-		
+		if(s[i]=='R'){
+			vec.insert(vec_it+1,i);
+		}else{
+			vec.insert(vec_it,i);
+			vec_it--;
+		}
+	}
+	for(int i=0;i<n;i++){
+		cout<<vec[i]<<" ";
 	}
 	return 0;
 }
