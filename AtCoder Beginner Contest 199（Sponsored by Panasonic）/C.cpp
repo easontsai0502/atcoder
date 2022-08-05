@@ -6,6 +6,8 @@
 #include<cmath>
 #include<vector>
 using namespace std;
+#define ulli unsigned long long int
+#define lli long long int
 int main(){
 	int n;
 	cin>>n;
@@ -13,26 +15,28 @@ int main(){
 	cin>>s;
 	int q;
 	cin>>q;
+	ulli ccount=0;
 	while(q--){
 		int t,a,b;
 		cin>>t>>a>>b;
 		if(t==2){
-			char ns[n*2+1];
-			for(int i=0;i<n;i++){
-				ns[i]=s[i+n];
-				ns[i+n]=s[i];
-			}
-			for(int i=0;i<(n*2+1);i++){
-				s[i]=ns[i];
-			}
+			ccount=(ccount+1)%2;
 		}else{
-			char x=s[a-1];
-			s[a-1]=s[b-1];
-			s[b-1]=x;
+			if(ccount){
+				swap(s[(a+n)%(2*n)],s[(b+n)%(2*n)]);
+			}else{
+				swap(s[a],s[b]);
+			}
 		}
 	}
-	for(int i=0;i<n*2;i++){
-		cout<<s[i];
+	if(ccount){
+		for(int i=0;i<n;i++){
+			cout<<s[(i+n)%(2*n)];
+		}
+	}else{
+			for(int i=0;i<n*2;i++){
+			cout<<s[i];
+		}
 	}
 	return 0;
 }
