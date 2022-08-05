@@ -1,5 +1,6 @@
 /*
 [Q]https://atcoder.jp/contests/abc229/tasks/abc229_c
+[AC]
 */
 #include<iostream>
 #include<vector>
