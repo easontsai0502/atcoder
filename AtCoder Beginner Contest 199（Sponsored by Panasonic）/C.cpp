@@ -1,5 +1,6 @@
 /*
 [Q]https://atcoder.jp/contests/abc199/tasks/abc199_c
+[AC]
 */
 #include<iostream>
 #include<algorithm>
@@ -19,6 +20,8 @@ int main(){
 	while(q--){
 		int t,a,b;
 		cin>>t>>a>>b;
+		a--;
+		b--;
 		if(t==2){
 			ccount=(ccount+1)%2;
 		}else{
@@ -30,7 +33,7 @@ int main(){
 		}
 	}
 	if(ccount){
-		for(int i=0;i<n;i++){
+		for(int i=0;i<n*2;i++){
 			cout<<s[(i+n)%(2*n)];
 		}
 	}else{
