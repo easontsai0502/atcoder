@@ -1,5 +1,5 @@
 /*
-[Q]
+[Q]https://atcoder.jp/contests/dp/submissions/35461367
 [WA 10/11]
 */
 
@@ -24,7 +24,7 @@ using namespace std;
 /*define type*/
 #define ULLI unsigned long long int
 #define LLI long long int
-#define INT int
+#define INT LLI
 #define UINT unsigned INT
 #define PII pair<INT,INT>
 #define PUIUI pair<UINT,UINT>
@@ -52,17 +52,21 @@ int main(){
 		cin>>stone[i];
 	}
 	/*solve*/
-	INT dp[n+1];
-	dp[0]=dp[1]=0;
-	for(INT i=2;i<=n;i++){
-		if(i==2){
-			dp[i]=abs(stone[i]-stone[i-1])+dp[i-1];
+	if(n==2){
+		cout<<abs(stone[1]-stone[2])<<"\n";
+	}else{
+		INT dp[n+1];
+		dp[0]=dp[1]=0;
+		for(INT i=2;i<=n;i++){
+			if(i==2){
+				dp[i]=abs(stone[i]-stone[i-1])+dp[i-1];
+			}
+			INT a=abs(stone[i]-stone[i-1])+dp[i-1];
+			INT b=abs(stone[i]-stone[i-2])+dp[i-2];
+			dp[i]=min(a,b);
 		}
-		INT a=abs(stone[i]-stone[i-1])+dp[i-1];
-		INT b=abs(stone[i]-stone[i-2])+dp[i-2];
-		dp[i]=min(a,b);
+		cout<<dp[n]<<"\n";
 	}
-	cout<<dp[n];
 	return 0;
 }
 
