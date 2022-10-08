@@ -77,6 +77,17 @@
 					"edit":[],
 					"other_thing":"",
 					"other_branch":[]
+				},
+				{"time":"10-08-2022-15:48",
+					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
+					"do":"files edit",
+					"add":[
+						"./Educational DP Contest/A.cpp"
+					],
+					"remove":[],
+					"edit":[],
+					"other_thing":"",
+					"other_branch":[]
 				}
 			]
 		}
