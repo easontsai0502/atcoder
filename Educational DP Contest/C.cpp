@@ -1,6 +1,6 @@
 /*
-[Q]
-[]
+[Q]https://atcoder.jp/contests/dp/tasks/dp_c
+[AC]
 */
 
 /*include*/
@@ -46,24 +46,25 @@ int main(){
 	INT n;
 	cin>>n;
 	/*solve*/
-	INT abc[3];
 	INT dp[2][3];
 	dp[0][0]=dp[0][1]=dp[0][2]=0;
 	dp[1][0]=dp[1][1]=dp[1][2]=0;
+	INT cc[6]={0,1,2,0,1,2};
 	for(int j=0;j<n;j++){
-		cin>>abc[0]>>abc[1]>>abc[2];
+		//cout<<(j)%2<<" ";
 		for(INT i=0;i<3;i++){
-
+			INT abc;
+			cin>>abc;
 			INT typea;
-			typea=dp[(j+1)%2][(i+1)%3]+abc[i];
+			typea=dp[(j+1)%2][cc[i+1]]+abc;
 			//從右上角過來
 			INT typeb;
-			typea=dp[(j+1)%2][(i+2)%3]+abc[i];
+			typeb=dp[(j+1)%2][cc[i+2]]+abc;
 			//從左上角過來
 			dp[(j)%2][i]=max(typea,typeb);
-			cout<<(j)%2<<" ";
+			//cout<<typea<<","<<typeb<<" ";
 		}
-		cout<<"\n";
+		//cout<<"\n";
 	}
 	cout<<max(dp[(n-1)%2][1],max(dp[(n-1)%2][2],dp[(n-1)%2][0]));
 	return 0;
