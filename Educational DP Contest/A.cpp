@@ -1,6 +1,6 @@
 /*
 [Q]https://atcoder.jp/contests/dp/submissions/35461367
-[WA 10/11]
+[AC]
 */
 
 /*include*/
@@ -56,7 +56,7 @@ int main(){
 	dp[0]=dp[1]=0;
 	for(INT i=2;i<=n;i++){
 		dp[i]=dp[i-1]+abs(stone[i]-stone[i-1]);
-		if(i>1)dp[i]=min(dp[i],dp[i-2]+abs(stone[i]-stone[i-2]));
+		if(i>2)dp[i]=min(dp[i],dp[i-2]+abs(stone[i]-stone[i-2]));
 	}
 	cout<<dp[n]<<"\n";
 	
