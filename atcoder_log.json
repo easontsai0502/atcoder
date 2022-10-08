@@ -82,7 +82,9 @@
 					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
 					"do":"files edit",
 					"add":[
-						"./Educational DP Contest/A.cpp"
+						"./Educational DP Contest/A.cpp",
+						"./Educational DP Contest/B.cpp",
+						"./Educational DP Contest/C.cpp"
 					],
 					"remove":[],
 					"edit":[],
