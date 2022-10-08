@@ -52,21 +52,14 @@ int main(){
 		cin>>stone[i];
 	}
 	/*solve*/
-	if(n==2){
-		cout<<abs(stone[1]-stone[2])<<"\n";
-	}else{
-		INT dp[n+1];
-		dp[0]=dp[1]=0;
-		for(INT i=2;i<=n;i++){
-			if(i==2){
-				dp[i]=abs(stone[i]-stone[i-1])+dp[i-1];
-			}
-			INT a=abs(stone[i]-stone[i-1])+dp[i-1];
-			INT b=abs(stone[i]-stone[i-2])+dp[i-2];
-			dp[i]=min(a,b);
-		}
-		cout<<dp[n]<<"\n";
+	INT dp[n+1];
+	dp[0]=dp[1]=0;
+	for(INT i=2;i<=n;i++){
+		dp[i]=dp[i-1]+abs(stone[i]-stone[i-1]);
+		if(i>1)dp[i]=min(dp[i],dp[i-2]+abs(stone[i]-stone[i-2]));
 	}
+	cout<<dp[n]<<"\n";
+	
 	return 0;
 }
 
