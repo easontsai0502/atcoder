@@ -1,6 +1,6 @@
 /*
-[Q]
-[]
+[Q]https://atcoder.jp/contests/dp/tasks/dp_f
+[WA TLE]
 */
 
 /*include*/
@@ -47,33 +47,36 @@ int main(){
 	string s,t;
 	cin>>s>>t;
 	/*solve*/
-	string dp[s.size()+1][t.size()+1];
-	
-	for(INT i=0;i<=s.size();i++){
-		for(INT j=0;j<=t.size();j++){
+	INT ss=s.size(),ts=t.size();
+	string dp[ss+1][ts+1];
+	for(INT i=0;i<=ss;i++){
+		for(INT j=0;j<=ts;j++){
 			//cout<<i<<","<<j<<" ";
-			dp[i][j]="";
+			dp[i][j]={NULL};
 		}
 		//cout<<"\n";
 	}
-	for(INT i=1;i<=s.size();i++){
-		for(INT j=1;j<=t.size();j++){
+	for(INT i=1;i<=ss;i++){
+		for(INT j=1;j<=ts;j++){
+			
 			if(dp[i-1][j].size()>dp[i][j-1].size()){
-				if(s[i]==t[j]){
-					string ad={s[i]};
-					dp[i][j]=dp[i][j-1]+ad;
-				}else dp[i][j]=dp[i-1][j];
+				dp[i][j]=dp[i-1][j];
 			}else{
-				if(s[i]==t[j]){
-					string ad={s[i]};
-					dp[i][j]=dp[i][j-1]+ad;
-				}else dp[i][j]=dp[i][j-1];
+				dp[i][j]=dp[i][j-1];
 			}
-			cout<<dp[i][j].size()<<",";
+
+			if(s[i-1]==t[j-1]){
+				dp[i][j].push_back(s[i-1]);
+			}
+
+			//cout<<dp[i][j]<<",";
 		}
-		cout<<"\n";
+		//cout<<"\n";
 	}
-	cout<<dp[s.size()][t.size()];
+	//for(int i=0;i<dp[ss][ts].size();i++){
+	//	cout<<dp[ss][ts][i];
+	//}
+	cout<<dp[ss][ts]<<"\n";
 	return 0;
 }
 
