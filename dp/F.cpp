@@ -57,16 +57,20 @@ int main(){
 		//cout<<"\n";
 	}
 	for(INT i=1;i<=ss;i++){
+		bool copy=false;
 		for(INT j=1;j<=ts;j++){
 			
 			if(dp[i-1][j].size()>dp[i][j-1].size()){
 				dp[i][j]=dp[i-1][j];
+				copy=false;
 			}else{
 				dp[i][j]=dp[i][j-1];
 			}
-
-			if(s[i-1]==t[j-1]){
-				dp[i][j].push_back(s[i-1]);
+			if(!copy){
+				if(s[i-1]==t[j-1]){
+					dp[i][j].push_back(s[i-1]);
+					copy=true;
+				}
 			}
 
 			//cout<<dp[i][j]<<",";
