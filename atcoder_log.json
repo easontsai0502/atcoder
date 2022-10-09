@@ -129,7 +129,14 @@
 					},
 					"do": "files edit",
 					"add": [
-						"./Educational DP Contest/E.cpp"
+						"./dp/E.cpp",
+						"./dp/F.cpp"
+					],
+					"rename": [
+						{
+							"original": "./AtCoder Beginner Contest *",
+							"to": "abc *"
+						}
 					],
 					"remove": [],
 					"edit": [],
