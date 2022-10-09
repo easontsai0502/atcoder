@@ -130,7 +130,8 @@
 					"do": "files edit",
 					"add": [
 						"./dp/E.cpp",
-						"./dp/F.cpp"
+						"./dp/F.cpp",
+						"./dp/N.cpp"
 					],
 					"rename": [
 						{
