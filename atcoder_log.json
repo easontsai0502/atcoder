@@ -1,17 +1,26 @@
 {
-	"gitname":"atcoder",
-	"git_log":[
-		{"name":"main",
-			"verson_tree":[
-				{"time":"08-02-2022-18:17",
-					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
-					"do":"git create",
-					"name":"atcoder"
+	"gitname": "atcoder",
+	"git_log": [
+		{
+			"name": "main",
+			"verson_tree": [
+				{
+					"time": "08-02-2022-18:17",
+					"by": {
+						"name": "ET01",
+						"mail": "kagariet01@outlook.com"
+					},
+					"do": "git create",
+					"name": "atcoder"
 				},
-				{"time":"08-02-2022-18:17",
-					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
-					"do":"files add",
-					"add":[
+				{
+					"time": "08-02-2022-18:17",
+					"by": {
+						"name": "ET01",
+						"mail": "kagariet01@outlook.com"
+					},
+					"do": "files add",
+					"add": [
 						"./AtCoder Beginner Contest 103/D.cpp",
 						"./AtCoder Beginner Contest 121/D.cpp",
 						"./AtCoder Beginner Contest 121/D_2.cpp",
@@ -29,67 +38,103 @@
 						"./main_log.json",
 						"./NEC Programming Contest 2021(AtCoder Beginner Contest 229)/C.cpp"
 					],
-					"remove":[],
-					"edit":[],
-					"other_thing":"",
-					"other_branch":[]
+					"remove": [],
+					"edit": [],
+					"other_thing": "",
+					"other_branch": []
 				},
-				{"time":"08-02-2022-19:33",
-					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
-					"do":"files add",
-					"add":[
+				{
+					"time": "08-02-2022-19:33",
+					"by": {
+						"name": "ET01",
+						"mail": "kagariet01@outlook.com"
+					},
+					"do": "files add",
+					"add": [
 						"./AtCoder Beginner Contest 261/C.cpp"
 					],
-					"remove":[],
-					"edit":[],
-					"other_thing":"",
-					"other_branch":[]
+					"remove": [],
+					"edit": [],
+					"other_thing": "",
+					"other_branch": []
 				},
-				{"time":"08-05-2022-14:58",
-					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
-					"do":"files edit",
-					"add":[],
-					"remove":[],
-					"edit":[
+				{
+					"time": "08-05-2022-14:58",
+					"by": {
+						"name": "ET01",
+						"mail": "kagariet01@outlook.com"
+					},
+					"do": "files edit",
+					"add": [],
+					"remove": [],
+					"edit": [
 						"./AtCoder Beginner Contest 199（Sponsored by Panasonic）/C.cpp"
 					],
-					"other_thing":"",
-					"other_branch":[]
+					"other_thing": "",
+					"other_branch": []
 				},
-				{"time":"08-05-2022-14:58",
-					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
-					"do":"files edit",
-					"add":[],
-					"remove":[],
-					"edit":[
+				{
+					"time": "08-05-2022-14:58",
+					"by": {
+						"name": "ET01",
+						"mail": "kagariet01@outlook.com"
+					},
+					"do": "files edit",
+					"add": [],
+					"remove": [],
+					"edit": [
 						"./AtCoder Beginner Contest 237/d.cpp"
 					],
-					"other_thing":"",
-					"other_branch":[]
+					"other_thing": "",
+					"other_branch": []
 				},
-				{"time":"08-05-2022-14:58",
-					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
-					"do":"files edit",
-					"add":[
+				{
+					"time": "08-05-2022-14:58",
+					"by": {
+						"name": "ET01",
+						"mail": "kagariet01@outlook.com"
+					},
+					"do": "files edit",
+					"add": [
 						"./AtCoder Beginner Contest 245/C.cpp"
 					],
-					"remove":[],
-					"edit":[],
-					"other_thing":"",
-					"other_branch":[]
+					"remove": [],
+					"edit": [],
+					"other_thing": "",
+					"other_branch": []
 				},
-				{"time":"10-08-2022-15:48",
-					"by":{"name":"ET01","mail":"kagariet01@outlook.com"},
-					"do":"files edit",
-					"add":[
+				{
+					"time": "10-08-2022-15:48",
+					"by": {
+						"name": "ET01",
+						"mail": "kagariet01@outlook.com"
+					},
+					"do": "files edit",
+					"add": [
 						"./Educational DP Contest/A.cpp",
 						"./Educational DP Contest/B.cpp",
-						"./Educational DP Contest/C.cpp"
+						"./Educational DP Contest/C.cpp",
+						"./Educational DP Contest/D.cpp"
 					],
-					"remove":[],
-					"edit":[],
-					"other_thing":"",
-					"other_branch":[]
+					"remove": [],
+					"edit": [],
+					"other_thing": "",
+					"other_branch": []
+				},
+				{
+					"time": "10-09-2022-10:24",
+					"by": {
+						"name": "ET01",
+						"mail": "kagariet01@outlook.com"
+					},
+					"do": "files edit",
+					"add": [
+						"./Educational DP Contest/E.cpp"
+					],
+					"remove": [],
+					"edit": [],
+					"other_thing": "",
+					"other_branch": []
 				}
 			]
 		}
