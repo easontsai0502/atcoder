@@ -1,6 +1,6 @@
 /*
 [Q]https://atcoder.jp/contests/dp/tasks/dp_f
-[WA TLE]
+[AC]
 */
 
 /*include*/
@@ -36,7 +36,7 @@ using namespace std;
 /*num*/
 string s,t;
 INT dp[3001][3001];
-bool debug=true;
+bool debug=false;
 /*fn定義*/
 void lcs(INT n,INT m){
 	for(INT i=1;i<=n;i++){
@@ -55,6 +55,7 @@ void printdp(INT n,INT m){
 			}
 			cout<<endl;
 		}
+		cout<<endl;
 	}
 }
 string backlcs(INT n,INT m){
@@ -62,7 +63,7 @@ string backlcs(INT n,INT m){
 	INT i=n,j=m;
 	while(i && j){
 		if(s[i-1]==t[j-1]){
-			re.push_back(s[i]);
+			re.push_back(s[i-1]);
 			i--;
 			j--;
 		}else{
@@ -70,7 +71,6 @@ string backlcs(INT n,INT m){
 				i--;
 			}else j--;
 		}
-		cout<<i<<","<<j<<","<<re<<" ";
 	}
 	reverse(re.begin(),re.end());
 	return re;
@@ -78,15 +78,13 @@ string backlcs(INT n,INT m){
 /*main*/
 int main(){
 	/*IO加速*/
-	cin.tie(0);cout.tie(0);ios::sync_with_stdio(false);
+	if(!debug){cin.tie(0);cout.tie(0);ios::sync_with_stdio(false);}
 	/*CIN*/
-	string s,t;
 	cin>>s>>t;
 	/*solve*/
 	INT ss=s.length(),ts=t.length();
-	//s=" "+s;
-	//t=" "+t;
 	lcs(ss,ts);
+	printdp(ss,ts);
 	cout<<backlcs(ss,ts);
 	return 0;
 }
