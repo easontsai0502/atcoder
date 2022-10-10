@@ -36,18 +36,26 @@ using namespace std;
 /*num*/
 string s,t;
 INT dp[3001][3001];
+bool debug=true;
 /*fn定義*/
-INT lcs(INT n,INT m){
+void lcs(INT n,INT m){
 	for(INT i=1;i<=n;i++){
 		for(INT j=1;j<=m;j++){
 			if(s[i]==t[j]){
 				dp[i][j]=dp[i-1][j-1]+1;
 			}else dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
-			cout<<dp[i][j]<<",";
 		}
-		cout<<"\n";
 	}
-	return 0;
+}
+void printdp(INT n,INT m){
+	if(debug){
+		for(INT i=0;i<=n;i++){
+			for(INT j=0;j<=m;j++){
+				cout<<dp[i][j]<<",";
+			}
+			cout<<endl;
+		}
+	}
 }
 string backlcs(INT n,INT m){
 	string re="";
@@ -62,7 +70,7 @@ string backlcs(INT n,INT m){
 				i--;
 			}else j--;
 		}
-		cout<<i<<","<<j<<" ";
+		cout<<i<<","<<j<<","<<re<<" ";
 	}
 	reverse(re.begin(),re.end());
 	return re;
