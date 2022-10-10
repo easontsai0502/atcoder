@@ -34,9 +34,35 @@ using namespace std;
 /*fn宣告*/
 
 /*num*/
-
+string s,t;
+INT dp[3001][3001];
 /*fn定義*/
-
+INT lcs(INT n,INT m){
+	for(INT i=1;i<=n;i++){
+		for(INT j=1;j<=m;j++){
+			if(s[i-1]==t[j-1]){
+				dp[i][j]=dp[i-1][j-1]+1;
+			}else dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
+		}
+	}
+}
+string backlcs(INT n,INT m){
+	string re="";
+	INT i=n,j=m;
+	while(i && j){
+		if(s[i]==t[j]){
+			re.push_back(s[i]);
+			i--;
+			j--;
+		}else{
+			if(dp[i][j]==dp[i-1][j]){
+				i--;
+			}else j--;
+		}
+	}
+	reverse(re.begin(),re.end());
+	return re;
+}
 /*main*/
 int main(){
 	/*IO加速*/
