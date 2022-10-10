@@ -41,7 +41,7 @@ bool debug=true;
 void lcs(INT n,INT m){
 	for(INT i=1;i<=n;i++){
 		for(INT j=1;j<=m;j++){
-			if(s[i]==t[j]){
+			if(s[i-1]==t[j-1]){
 				dp[i][j]=dp[i-1][j-1]+1;
 			}else dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
 		}
@@ -61,7 +61,7 @@ string backlcs(INT n,INT m){
 	string re="";
 	INT i=n,j=m;
 	while(i && j){
-		if(s[i]==t[j]){
+		if(s[i-1]==t[j-1]){
 			re.push_back(s[i]);
 			i--;
 			j--;
@@ -84,8 +84,8 @@ int main(){
 	cin>>s>>t;
 	/*solve*/
 	INT ss=s.length(),ts=t.length();
-	s=" "+s;
-	t=" "+t;
+	//s=" "+s;
+	//t=" "+t;
 	lcs(ss,ts);
 	cout<<backlcs(ss,ts);
 	return 0;
