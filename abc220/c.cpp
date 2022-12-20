@@ -80,6 +80,19 @@ struct mat{
 PII padd(PII a,PII b){
 	return {a.FIR+b.FIR,a.SEC+b.SEC};
 }
+
+template<typename TPE,typename TPE2,typename Fn>TPE Bit_Search(TPE l,TPE r,TPE2 n,Fn isit){
+	while(r-l>1){
+		TPE nw=l+(r-l)/2;
+		if(isit(n,*nw)){
+			r=nw;
+		}else{
+			l=nw;
+		}
+	}
+	return r;
+}
+
 /*main*/
 int main(){
 	if(!debug&&iofast){what_the_fuck;}
