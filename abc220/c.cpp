@@ -30,7 +30,7 @@ using namespace std;
 #define what_the_fuck cin.tie(0);cout.tie(0);ios::sync_with_stdio(false)
 #define ULLI unsigned long long int
 #define LLI long long int
-#define INT LLI
+#define INT ULLI
 #define UINT unsigned INT
 #define PII pair<INT,INT>
 #define PUIUI pair<UINT,UINT>
@@ -47,17 +47,10 @@ struct mat;
 bool debug=0;
 bool iofast=true;
 
-PII mv[]={{0,1},{1,0},{0,-1},{-1,0}};
-INT mx[]={0,1,0,-1};
-INT my[]={1,0,-1,0};
-INT mod=988244353;
-
-const INT mxn=1e5;
-
-INT n;
-INT a[mxn+1];
-INT x;
-
+// PII mv[]={{0,1},{1,0},{0,-1},{-1,0}};
+// int mx[]={0,1,0,-1};
+// int my[]={1,0,-1,0};
+int mod=988244353;
 /*struct定義*/
 struct mat{
 	INT a[2][2];
@@ -81,7 +74,12 @@ PII padd(PII a,PII b){
 	return {a.FIR+b.FIR,a.SEC+b.SEC};
 }
 
+bool vser(const INT &n,const INT &nw){
+	return n<=nw;
+}
+
 template<typename TPE,typename TPE2,typename Fn>TPE Bit_Search(TPE l,TPE r,TPE2 n,Fn isit){
+	if(isit(n,*l))return l;
 	while(r-l>1){
 		TPE nw=l+(r-l)/2;
 		if(isit(n,*nw)){
@@ -93,11 +91,29 @@ template<typename TPE,typename TPE2,typename Fn>TPE Bit_Search(TPE l,TPE r,TPE2 
 	return r;
 }
 
+template<typename TPE>TPE reader(){
+	TPE a;
+	cin>>a;
+	return a;
+}
+
 /*main*/
 int main(){
 	if(!debug&&iofast){what_the_fuck;}
 	/*CIN*/
+	INT n=reader<INT>();
+	vector<INT> vec;
+	vec.push_back(0);
+	for(INT i=1;i<=n;i++){
+		vec.push_back(vec[i-1]+reader<INT>());
+	}
 	/*solve*/
+	INT x=reader<INT>();
+	INT ans=x/vec[n];
+	ans*=n;
+	vector<INT>::iterator it=Bit_Search(vec.begin(),vec.end(),(x%vec[n]),vser);
+	ans+=it-vec.begin();
+	cout<<ans<<endl;
 	return 0;
 }
 
