@@ -1,7 +1,8 @@
 /*
 [tioj]	[Q]https://tioj.ck.tp.edu.tw/problems/ [ID]
 [zj]
-[]
+[AtCoder]		[Q]https://atcoder.jp/contests/abc220/tasks/abc220_c
+[AC ]
 */
 
 /*include*/
